@@ -1,11 +1,11 @@
 const express = require('express');
 const app = express();
 
-//app.use(express.static('dist'));
+app.use(express.static('dist'));
 
 app.get('/', function (req, res) {
-   /*res.send('index.html');*/
-   res.send('hello');
+   res.send('index.html');
+   /*res.send('hello');*/
 })
 app.use(function(err, req, res, next) {
   console.error(err.message);
